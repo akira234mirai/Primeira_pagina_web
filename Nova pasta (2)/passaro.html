@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Trabalho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    @charset "UTF-8";
+
+    /* HTML5 display-role reset for older browsers */
+
+    html, body, div, span, applet, object, iframe, blockquote, pre,
+    a, abbr, acronym, address,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    	margin: 0;
+    	padding: 0;
+    	border: 0;
+    	font-size: 100%;
+    	font: inherit;
+    	vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    	display: block;
+    }
+    body {
+    	line-height: 1;
+    }
+    ol, ul {
+    	list-style: none;
+    }
+    blockquote, q {
+    	quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    	content: '';
+    	content: none;
+    }
+    table {
+    	border-collapse: collapse;
+    	border-spacing: 0;
+    }
+
+    *, html, body {
+    	margin:0;
+    	padding:0;
+    	}
+    *, *:before, *:after {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .cf:before,
+    .cf:after {content: " ";display: table;}
+    .cf:after {clear: both;}
+    .cf {*zoom: 1;}
+    body {
+    	margin-left:55px;
+    	font:  62.5%/1.2 Arial, sans-serif;
+
+    	     background-size: cover;
+    	     height: 100vh;
+    	  margin:10px;
+    	}
+
+    #lateral {
+    	padding:0 50px 0 0;
+    	-moz-transition: all 0.5s ease;
+    		-webkit-transition: all 0.5s ease;
+    			-o-transition: all 0.5s ease;
+    				transition: all 0.5s ease;
+    	font-size:1.2em;
+    	background:rgb(44,62,80);
+    	background-image: -moz-linear-gradient( 135deg, rgb(3,8,12), rgb(16,57,79) );
+    			background-image: -webkit-linear-gradient( 135deg, rgb(3,8,12), rgb(16,57,79) );
+    					background-image: -o-linear-gradient( 135deg, rgb(3,8,12), rgb(16,57,79) );
+    							background-image: -ms-linear-gradient( 135deg, rgb(3,8,12), rgb(16,57,79) );
+    								background-image: linear-gradient( 135deg, rgb(3,8,12), rgb(16,57,79) );
+    	height:100%;
+    	overflow:hidden;
+    	width:370px;
+    	position:fixed;
+    	top:0;
+    	left:-320px;
+    	}
+    #lateral:before {
+    	z-index:1000;
+    	content: url(icone-menu.png);
+    	font-size:4em;
+    	color:white;
+    	position:fixed;
+    	left:4px;
+    	top:45px;
+    	}
+    #lateral:hover:before, #lateral:focus:before {
+    left:-500px
+    	}
+    #lateral:hover, #lateral:focus,  #lateral:active  {
+    	overflow-y:scroll;
+    	-moz-transform: translate(320px, 0);
+    		-webkit-transform: translate(320px, 0);
+    			-o-transform: translate(320px, 0);
+    				transform: translate(320px, 0);
+    	padding-right:0;
+    	}
+
+    #lateral .box {
+    	list-style-type:none;
+    	margin-bottom:1em;;
+    	padding-bottom:1em;
+    	}
+    #lateral h3 {
+    	display:inline-block;
+    	font-weight:bold;
+    	font-size:1.6em;
+    	font-style:normal;
+    	padding-bottom:0.2em;
+    	margin: 2em 0 2em 0.81em;
+    	color:rgb(255,255,255);
+    	border-bottom: 4px solid rgb(155,155,155);
+    	}
+    #menu {
+    	font-style:italic;
+    	position:relative;
+    	font-size:1.0em;
+    	margin:1em 0 1em -1em;
+    	padding:0;
+    	}
+    #menu li  {margin:0;padding:0;}
+    #menu li a,  #menu li a:link {
+    	font-size:1.2em;
+    	color:rgb(255,255,255);
+    	text-decoration: none;
+    	padding: 0.8em 0 0.8em 1em;
+    	display: block;
+    	-moz-transition: all 1.2s ease;
+    			-webkit-transition: all 1.2s ease;
+    				-o-transition: all 1.2s ease;
+    					transition: all 1.2s ease;
+    	}
+    #menu li a:hover {
+    	color:rgb(255,255,255);
+    	background-color:rgba(255,255,255,0.2);
+    	-moz-transition: all 0.5s ease;
+    			-webkit-transition: all 0.5s ease;
+    				-o-transition: all 0.5s ease;
+    					transition: all 0.5s ease;
+    	}
+    /* Fim 4a. Etapa */
+    /* 5a. Etapa */
+    @media (max-width: 500px) {
+    body {margin-left:0;background-size:100% 28em!important;}
+    #lateral {
+    	padding:0;
+    	-moz-transition: all 0.5s ease;
+    		-webkit-transition: all 0.5s ease;
+    			-o-transition: all 0.5s ease;
+    				transition: all 0.5s ease;
+    	font-size:1.2em;
+    	height:100%;
+    	overflow:auto;
+    	width:100%;
+    	position:static;
+    	top:0;
+    	left:0;
+    	}
+    #lateral:before {
+    	z-index:1000;
+    	width:0;
+    	text-align:center;
+    	content: "";
+    	font-size:0;
+    	color:white;
+    	position:static;
+    	top:0;
+    	left:0;
+    	display:inline-block;
+    	}
+    #lateral:hover, #lateral:focus {
+    	overflow:scroll;
+    	-moz-transform: none;
+    		-webkit-transform: none;
+    			-o-transform:none;
+    				transform:none;
+    	}
+    #menu li a {border-bottom:1px solid #ccc;}
+    #menu li:first-child a {border-top:1px solid #ccc;}
+    }
+
+
+
+
+
+    /* Fim 5a. Etapa */
+p{
+
+font-weight: bold;
+  font-size: 16px;
+
+  text-decoration: none;
+font-weight: bolder;
+  text-align: center;
+
+  letter-spacing: 2px; word-spacing: 4px;
+}
+
+
+    html, body, div, span, applet, object, iframe,
+    , h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    	margin: 0;
+    	padding: 0;
+    	border: 0;
+    	font-size: 100%;
+    	font: inherit;
+    	vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    	display: block;
+    }
+    body {
+    	line-height: 1;
+    }
+    ol, ul {
+    	list-style: none;
+    }
+    blockquote, q {
+    	quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    	content: '';
+    	content: none;
+    }
+    table {
+    	border-collapse: collapse;
+    	border-spacing: 0;
+    }
+    header {
+      display: flex;
+      align-items: center;
+    }
+
+    @media (min-width: 700px) {
+     .leading {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+
+    /* Grid styles -------------------------------------------------*/
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 30px;
+    }
+
+
+    /* Generic styles ----------------------------------------------*/
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: black;
+    }
+
+    header {
+      padding: 10px;
+      font-size: 2em;
+      color: white;
+      background-color: #333;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    .leading {
+      height: 340px;
+      margin-bottom: 30px;
+      padding: 30px;
+      color: white;
+      background: url('https://www.wallpaperup.com/uploads/wallpapers/2015/03/21/642479/692cf0163c03a42b217c54e3bae841b3-1000.jpg') center #333 no-repeat;/
+      background-size: cover;
+      color: white;
+      text-shadow: 0px 0px 5px #000;
+    }
+
+    .leading-bigtext {
+      margin-right: 30px;
+      font-weight: bold;
+      border: 900px;
+      font-size: 24vw;
+    }
+
+    @media (min-width: 700px) {
+      .leading-bigtext {
+        font-size: 140px;
+      }
+    }
+
+    .leading-text {
+      max-width: 400px;
+      font-size: 1.2em;
+      line-height: 1.4em;
+
+    }
+
+    .cards {
+      max-width: 960px;
+      margin: 0 auto 30px;
+
+    }
+
+    article {
+      position: relative;
+    }
+
+    .article-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      padding: 10px;
+    }
+
+  }
+/* a parte do texto DEPAIXO DAS IMAGENS A COR o espaço e a posiçãoptimize*/
+  .article-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+    </style>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/reset.css">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <script src="/script.js" defer></script>
+
+  </head>
+  <body>
+    <div id="lateral" onclick="return true" aria-haspopup="true">
+    <div id="menu">
+
+
+        <ul class="box">
+            <li><a href="pagina.html">HOME</a></li>
+            <li><a href="formulario.html">FORMULARIO</a></li>
+            <li><a href="passaro.html"> Esplicacão do conto</a></li>
+
+        </ul>
+
+    </div>
+    </div>
+    <div id="footer">
+    <?php include('../inc/footer.inc.php'); ?>
+    </div>
+    <header>
+      <img class="logo" src="" alt="" />
+      <h2 class="heading">A menina e o pássaro encantado teorias</h2>
+    </header>
+    <main>
+      <section class="leading">
+        <p class="leading-bigtext"></p>
+        <p class="leading-text"></p>
+      </section>
+      <font color="white">
+  <p>"Sabe ela vivia dentro de uma gaiola, mais essa gaiola se consistia em sua vida rotineira e mundana, mais essa gaiola estava preste diminuir, as horas viram dias e os dias semanas disso a fez ela se tornar prisioneira mas quando ela pensou que o mundo a havia prisioneira para sempre, a natureza teve outra ideia, e pela primeira vez na vida ela se sentiu algo." </b></p>
+<p> Referencia da serie sweet tooth episodeo 2</p>
+  <center>
+  </br>
+</br>
+</br>
+
+  <h1>Parte negra da historia</h1></center>
+
+
+</font>
+      <section class="cards">
+        <article>
+          <img class="article-img" src="d/f.jpg" alt=" " />
+          <p class="article-title">
+<font color="white">
+Na história fala que que ela prendeu o pássaro, mas na verdade ela já estava presa na imensidade dos seus sentimentos.</font>
+</p>
+        </article>
+        <article>
+          <img class="article-img" src="d/u.jpg" alt=" " />
+          <p class="article-title">
+            <font color="white">
+              Ela se sentia solitária e sozinha ela queria apena algo que a conectasse com o lado de fora.
+</font>
+</p>
+        </article>
+        <article>
+          <img class="article-img" src="d/x.jpg" alt=" " />
+          <p class="article-title">
+            <font color="white">
+Um dos sentimentos que ela mais sentiu foi a ganancia, o que ela queria que não fosse tomado.      </font>
+    </article>
+
+
+
+
+
+
+
+
+
+
+      </section>
+    </main>
+  </body>
+</html>
